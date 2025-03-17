@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Projectile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>/* 🌌 Background */
+body {
+    background: #222; /* Dark Space Theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 📦 Main Container */
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: #2b2d42;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 🏠 Home Button */
+.home-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 12px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* 🎯 Title */
+.title {
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+/* 🎯 Projectiles */
+.projectiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.projectile {
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+/* 🟣 Large Purple Projectile */
+.large {
+    width: 80px;
+    height: 80px;
+    background: #d1b3ff;
+}
+
+/* 🔴 Medium Red Projectile */
+.medium {
+    width: 50px;
+    height: 50px;
+    background: #ff4d4d;
+    border: 3px solid white;
+}
+
+/* ⚪ Small White Projectile */
+.small {
+    width: 30px;
+    height: 30px;
+    background: #e0e0e0;
+}
+
+/* 📦 Properties Boxes */
+.properties-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box {
+    width: 120px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+/* ▶ Next Button */
+.next-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* 🪐 Jupiter Base */
+.jupiter-base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 50px;
+    background: orange;
+    border-radius: 50% 50% 0 0;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}</style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Home Button -->
+        <button class="home-btn">Home</button>
+
+        <!-- Title -->
+        <h1 class="title">Choose your projectile</h1>
+
+        <!-- Projectiles -->
+        <div class="projectiles">
+            <div class="projectile large"></div>
+            <div class="projectile medium"></div>
+            <div class="projectile small"></div>
+        </div>
+
+        <!-- Properties Boxes -->
+        <div class="properties-boxes">
+            <div class="box">Properties<br>-<br>-<br>-</div>
+            <div class="box">Properties<br>-<br>-<br>-</div>
+            <div class="box">Properties<br>-<br>-<br>-</div>
+        </div>
+
+        <!-- Next Button -->
+        <button class="next-btn">Next</button>
+
+        <!-- Jupiter Curved Base -->
+        <div class="jupiter-base">Jupiter</div>
+
+    </div>
+
+</body>
+</html>

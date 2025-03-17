@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Projectile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>/* 🌌 Background */
+body {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 📦 Main Container */
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: #2b2d42;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 🏠 Home & 🔙 Back Buttons */
+.home-btn, .back-btn {
+    position: absolute;
+    top: 10px;
+    padding: 6px 12px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.home-btn {
+    left: 10px;
+}
+
+.back-btn {
+    left: 70px;
+}
+
+/* 🌬 Wind Control Box */
+.wind-control {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
+
+.wind-control label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+#wind-slider {
+    width: 150px;
+}
+
+.wind-values {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* 🚀 Launch Button */
+.launch-btn {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* 🔄 Compare Button */
+.compare-btn {
+    position: absolute;
+    top: 130px;
+    right: 20px;
+    background-color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* 🪐 Jupiter Base */
+.jupiter-base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 50px;
+    background: orange;
+    border-radius: 50% 50% 0 0;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}</style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Home & Back Buttons -->
+        <button class="home-btn">Home</button>
+        <button class="back-btn">Back</button>
+
+        <!-- Wind Control Box -->
+        <div class="wind-control">
+            <label for="wind-slider">Wind</label>
+            <input type="range" id="wind-slider" min="-10" max="10" step="1" value="0">
+            <span class="wind-values">-10 m/s &nbsp;&nbsp;&nbsp; 10 m/s</span>
+        </div>
+
+        <!-- Launch and Compare Buttons -->
+        <button class="launch-btn">LAUNCH</button>
+        <button class="compare-btn">Compare</button>
+
+        <!-- Jupiter Base -->
+        <div class="jupiter-base">Jupiter</div>
+
+    </div>
+
+</body>
+</html>

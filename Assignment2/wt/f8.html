@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter Projectile Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>/* General Page Styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to bottom, #2d2b45, #1b1b2f);
+    overflow: hidden;
+}
+
+/* Home and Back Buttons */
+.nav-buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.btn {
+    background: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Wind Control */
+.wind-control {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+input[type="range"] {
+    width: 100px;
+}
+
+/* Controls (Launch and Compare Buttons) */
+.controls {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+
+.launch-btn {
+    background: red;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.compare-btn {
+    background: white;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Jupiter Base */
+.jupiter-base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 50px;
+    background: orange;
+    border-radius: 50% 50% 0 0;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Projectile Arc */
+.arc {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: pink;
+    border-radius: 50%;
+    position: relative;
+    animation: projectile-animation 2s infinite alternate;
+}
+
+/* Projectile Animation */
+@keyframes projectile-animation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}</style>
+</head>
+<body>
+    <div class="container">
+        <!-- Home and Back Buttons -->
+        <div class="nav-buttons">
+            <button class="btn">Home</button>
+            <button class="btn">Back</button>
+        </div>
+
+        <!-- Wind Control -->
+        <div class="wind-control">
+            <label>Wind</label>
+            <input type="range" min="-10" max="10" value="0">
+        </div>
+
+        <!-- Launch and Compare Buttons -->
+        <div class="controls">
+            <button class="launch-btn">LAUNCH</button>
+            <button class="compare-btn">Compare</button>
+        </div>
+
+        <!-- Jupiter Base -->
+        <div class="jupiter-base">Jupiter</div>
+
+        <!-- Projectile Arc -->
+        <div class="arc">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>
